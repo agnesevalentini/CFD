@@ -1,2 +1,2 @@
 # CFD
-Repo for the computational fluid dynamics exam
+Repo for the computational fluid dynamics exam, missing the airfoil
