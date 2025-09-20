@@ -1,3 +1,4 @@
+# script to plot the normals to the foil given the points on the foil upper surface
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -66,4 +67,5 @@ for x_fix in X_Fix:
 
 
 plt.show()
+
 
