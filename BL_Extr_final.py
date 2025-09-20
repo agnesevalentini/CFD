@@ -2,14 +2,13 @@
 Compute boundary-layer thickness (delta_0.xx) for a set of CSVs and plot them.
 
 Usage:
-- Put this script in a folder with subfolder 'csvs' or change `csv_folder`.
+Put this script in a folder with subfolder 'csvs' or change `csv_folder`.
 """
 
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
 
-# ----- USER SETTINGS -----
 x = [0.03, 0.06, 0.1, 0.2, 0.3, 0.4] # vector of the points on the foil chosen to extract the delta
 chord = 0.48 # chord of the foil
 t = 0.12 # thickness of the foil
@@ -20,7 +19,7 @@ Bl_thickness = 0.99 # thickness of boundary layer, it should be between 0 and 1
 slip = True # if true, the BL is computed using the U_e extracted from the slip case
 slip_csv_folder = 'airfoil_{}_slip_refined' # folder of the slip csv file, ignored if slip = False
 slip_csv_name = 'u_airfoil_refined_x{}_{}_slip.csv' # name of slip csv file, ignored if slip = False
-# -------------------------
+
 
 # We need this function to compute the normal and the tangent to the foil
 def foil_derivative(t:float, chord:float, x):
@@ -143,4 +142,5 @@ else:
     plt.title('Boundary layer without slip simulation')
 plt.grid(True)
 plt.legend()
+
 plt.show()
